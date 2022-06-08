@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/training-react/static/css/main.1b812cae.css",
+    "main.js": "/training-react/static/js/main.60d21f80.js",
+    "index.html": "/training-react/index.html",
+    "main.1b812cae.css.map": "/training-react/static/css/main.1b812cae.css.map",
+    "main.60d21f80.js.map": "/training-react/static/js/main.60d21f80.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1b812cae.css",
+    "static/js/main.60d21f80.js"
+  ]
+}
