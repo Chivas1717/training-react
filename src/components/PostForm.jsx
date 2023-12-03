@@ -1,18 +1,21 @@
-import React, { useState } from "react";
-import MyInput from "./UI/input/MyInput";
-import MyButton from "./UI/button/MyButton";
+import React, { useState } from 'react';
+import MyInput from './UI/input/MyInput';
+import MyButton from './UI/button/MyButton';
+import { addPost } from '../redux/slices/todoSlice';
+import { useDispatch } from 'react-redux';
 
-const PostForm = ({create}) => {
-  const [post, setPost] = useState({ title: "", body: "" });
-
-
+const PostForm = () => {
+  const [post, setPost] = useState({ title: '', body: '' });
+  // console.log('render');
+  const dispatch = useDispatch();
   const addNewPost = (e) => {
     e.preventDefault();
     const newPost = {
-      ...post, id: Date.now()
-    }
-    create(newPost)
-    setPost({ title: "", body: "" });
+      ...post,
+      id: Date.now(),
+    };
+    dispatch(addPost(newPost));
+    setPost({ title: '', body: '' });
   };
 
   return (
@@ -33,7 +36,7 @@ const PostForm = ({create}) => {
         <MyButton onClick={addNewPost}>Add new post</MyButton>
       </form>
     </div>
-  )
-}
+  );
+};
 
 export default PostForm;
